@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ****************** UNİCONS ********************** -->
+    <!-- ********************** CSS *************************** -->
+    <title>Portfolio Website - HCA</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- ********************** FAVICON *************************** -->
+    <link
+      rel="icon"
+      href="assets/images/software-engineer.png"
+      type="image/x-icon"
+    />
+    <!-- ********************** CSS *************************** -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- ****************** HEADER ************************ -->
+      <nav id="header">
+        <div class="nav-logo">
+          <p class="nav-name">hca</p>
+          <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+            <li class="nav_list">
+              <a href="#home" class="nav-link active-link">Home</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="#about" class="nav-link">About</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="#projects" class="nav-link">Projects</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="#contact" class="nav-link">Contact</a>
+              <div class="circle"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-button">
+          <a
+            class="btn"
+            href="assets/pdf/huseyin_can_akkaya_cv2.pdf"
+            download="Huseyin-Can-Akkaya-CV.pdf"
+            aria-label="Download CV"
+          >
+            Download CV <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+
+        <div class="nav-menu-btn">
+          <i class="fa-solid fa-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+      <!-- ****************** MAIN ************************ -->
+      <main class="wrapper">
+        <!-- ****************** FEATURED BOX ************************ -->
+        <section class="featured-box" id="home">
+          <div class="featured-text">
+            <div class="featured-text-card">
+              <span>Hüseyin Can Akkaya</span>
+            </div>
+            <div class="featured-name">
+              <p>I'm <span class="typedText"></span></p>
+            </div>
+            <div class="featured-text-info">
+              <p>
+                Experienced frontend developer with a passion for creating
+                visually stunning and user frinedly websites
+              </p>
+            </div>
+            <div class="featured-text-btn">
+              <button class="btn blue-btn">Hire Me</button>
+              <button class="btn">
+                <a
+                  href="assets/pdf/huseyin_can_akkaya_cv2.pdf"
+                  download="Huseyin-Can-Akkaya-CV.pdf"
+                  aria-label="Download CV"
+                >
+                  Download CV <i class="fa-solid fa-file-pdf"></i>
+                </a>
+              </button>
+            </div>
+            <div class="social_icons">
+              <div class="icon">
+                <a href="https://www.linkedin.com/in/huseyincanakkaya/"
+                  ><i class="fa-brands fa-square-linkedin"></i
+                ></a>
+              </div>
+              <div class="icon">
+                <a href="https://github.com/HCAKKAYA"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="featured-image">
+            <div class="image">
+              <img src="assets/images/software-engineer.png" alt="avatar" />
+            </div>
+          </div>
+
+          <div class="scroll-icon-box">
+            <a href="#about" class="scroll-btn">
+              <i class="fa-solid fa-computer-mouse"></i>
+              <p>Scroll Down</p>
+            </a>
+          </div>
+        </section>
+        <!-- ****************** ABOUT ************************ -->
+        <section class="section" id="about">
+          <div class="top-header">
+            <h1>About Me</h1>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="about-info">
+                <h3>My introduction</h3>
+                <p>
+                  Hi, I’m Hüseyin Can Akkaya. I enjoy turning raw data into
+                  meaningful insights that support better decision-making. My
+                  journey started with curiosity about how data can reveal
+                  patterns and trends, and today I use tools like Python, SQL,
+                  and Power BI to analyze, visualize, and report on data. While
+                  my current focus is on data analysis and business
+                  intelligence, my future goal is to expand my expertise into
+                  web development and create digital platforms that bring
+                  together data and technology.
+                </p>
+                <div class="about-btn">
+                  <button class="btn">
+                    <a
+                      href="assets/pdf/huseyin_can_akkaya_cv2.pdf"
+                      download="Huseyin-Can-Akkaya-CV.pdf"
+                      aria-label="Download CV"
+                      >Download CV <i class="fa-solid fa-download"></i
+                    ></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Data Analysis</h3>
+                </div>
+                <div class="skills-list">
+                  <span>Python</span>
+                  <span>Pandas</span>
+                  <span>NumPy</span>
+                  <span>Scikit-learn</span>
+                  <span>Matplotlib</span>
+                  <span>Seaborn</span>
+                  <span>Plotly</span>
+                  <span>MSSQL</span>
+                  <span>Excel</span>
+                  <span>PowerBI</span>
+                  <span>Tableau</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ****************** PROJECTS ************************ -->
+        <section class="section" id="projects">
+          <div class="top-header">
+            <h1>Projects</h1>
+            <span>Selected work in Data Analysis & BI</span>
+          </div>
+
+          <!-- (Opsiyonel) Filtre düğmeleri -->
+          <div class="projects-filter" aria-label="Project filters">
+            <button class="pf-btn is-active" data-filter="all">All</button>
+            <button class="pf-btn" data-filter="da">Data Analysis</button>
+            <button class="pf-btn" data-filter="bi">BI / Dashboards</button>
+            <button class="pf-btn" data-filter="acad">Academic</button>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Proje 1 -->
+            <article class="project-card" data-cat="da bi">
+              <img
+                src="assets/images/game.png"
+                alt="Video Game Sales Analysis screenshot"
+                loading="lazy"
+              />
+              <div class="pc-body">
+                <h3 class="pc-title">Video Game Sales Analysis</h3>
+                <p class="pc-desc">
+                  I analyzed global sales data to uncover platform and genre
+                  trends, and created interactive visualizations to compare
+                  regions.
+                </p>
+                <ul class="pc-tags">
+                  <li>Python</li>
+                  <li>Pandas</li>
+                  <li>Seaborn</li>
+                  <li>Plotly</li>
+                  <li>PowerBI</li>
+                </ul>
+                <div class="pc-links">
+                  <a
+                    href="https://github.com/HCAKKAYA/video_game_sales"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Proje 2 -->
+            <article class="project-card" data-cat="da">
+              <img
+                src="assets/images/property-investment.png"
+                alt="House Prices Regression project"
+                loading="lazy"
+              />
+              <div class="pc-body">
+                <h3 class="pc-title">House Prices: Regression</h3>
+                <p class="pc-desc">
+                  I predicted house prices through missing value handling, log
+                  transformations, and modeling; feature engineering and error
+                  metrics were reported.
+                </p>
+                <ul class="pc-tags">
+                  <li>Python</li>
+                  <li>Pandas</li>
+                  <li>scikit-learn</li>
+                </ul>
+                <div class="pc-links">
+                  <!-- GitHub / Notebook linkleri -->
+                  <a href="#" target="_blank" rel="noopener">Github</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Proje 3 -->
+            <article class="project-card" data-cat="bi">
+              <img
+                src="assets/images/ecommerce.png"
+                alt="E-Commerce Sales Dashboard"
+                loading="lazy"
+              />
+              <div class="pc-body">
+                <h3 class="pc-title">E-Commerce Sales Analysis</h3>
+                <p class="pc-desc">
+                  End-to-end analysis of an e-commerce sales dataset using MSSQL
+                  and Python, including data cleaning, ETL, analysis, and
+                  customer segmentation (RFM).
+                </p>
+                <ul class="pc-tags">
+                  <li>MSSQL</li>
+                  <li>Python</li>
+                  <li>Pandas</li>
+                  <li>Numpy</li>
+                  <li>Matplotlib</li>
+                  <li>Seaborn</li>
+                </ul>
+                <div class="pc-links">
+                  <a href="#" target="_blank" rel="noopener">GitHub</a>
+                  <!-- <a href="#" target="_blank" rel="noopener">Live</a> -->
+                </div>
+              </div>
+            </article>
+            <div class="projects-more">
+              <a
+                href="https://github.com/HCAKKAYA"
+                target="_blank"
+                rel="noopener"
+                class="btn-link"
+              >
+                Daha fazlası için GitHub’a göz at →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ****************** CONTACT ************************ -->
+        <section class="section" id="contact">
+          <div class="top-header">
+            <h1>Get in touch</h1>
+            <span>Do you have a project in your mind, contact me here</span>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="contact-info">
+                <h2>Find me <i class="fa-solid fa-arrow-down"></i></h2>
+                <p>
+                  <i class="fa-solid fa-envelope"></i>Email: hcaakkaya@gmail.com
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-control">
+                <div class="form-inputs">
+                  <input type="text" class="input-field" placeholder="Name" />
+                  <input type="text" class="input-field" placeholder="Email" />
+                </div>
+                <div class="text-area">
+                  <textarea placeholder="Message"></textarea>
+                </div>
+                <div class="form-button">
+                  <a href="mailto:hcaakkaya@gmail.com" class="btn">
+                    Send <i class="fa-solid fa-paper-plane"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- ****************** FOOTER ************************ -->
+      <footer>
+        <div class="top-footer">
+          <p>Hüseyin Can Akkaya .</p>
+        </div>
+        <div class="middle-footer">
+          <ul class="footer-menu">
+            <li class="footer_menu_list">
+              <a href="#home">Home</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#about">About</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-social-icons">
+          <div class="icon">
+            <a href="https://www.linkedin.com/in/huseyincanakkaya/"
+              ><i class="fa-brands fa-square-linkedin"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <a href="https://github.com/HCAKKAYA"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+        <div class="bottom-footer">
+          <p>
+            Copyright &copy;
+            <a href="#home" style="text-decoration: none">Hüseyin Can Akkaya</a>
+            - All rights reserved
+          </p>
+          <p class="credits">
+            <p>Icons by
+              <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+            </p>
+            <p>Font by
+              <a href="https://fonts.google.com/specimen/Poppins" target="_blank">Google Fonts</a>
+            </p>
+            <p>
+              Avatar, video game analysis, e-commerce analysis image from
+              <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener">Freepik</a>
+            </p>
+            <p>
+              House price analysis image from
+              <a href="https://www.flaticon.com/authors/kornkun" target="_blank" rel="noopener">kornkun</a>
+            </p>
+          </p>
+        </div>
+      </footer>
+    </div>
+    <!-- ****************** TYPING JS LINK *************** -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- ****************** SCROLL REVEAL JS LINK *************** -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ****************** MAIN JS *************** -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

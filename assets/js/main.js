@@ -117,3 +117,31 @@ filterButtons.forEach((btn) => {
     });
   });
 });
+
+// ********************** swiper js **********************
+document.addEventListener("DOMContentLoaded", () => {
+  const swiper = new Swiper(".myProjectsSwiper", {
+    loop: true,
+    spaceBetween: 24,
+    grabCursor: true,
+
+    slidesPerView: 3, // varsayılan
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      640: { slidesPerView: 2 },
+      768: { slidesPerView: 3 },
+      1024: { slidesPerView: 4 },
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+});

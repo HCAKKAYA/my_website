@@ -13,6 +13,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- *************************** swiper css **************************** -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <!-- ********************** FAVICON *************************** -->
     <link
       rel="icon"
@@ -181,101 +186,153 @@
             <span>Selected work in Data Analysis & BI</span>
           </div>
 
-          <!-- (Opsiyonel) Filtre düğmeleri -->
+          <!-- Filtre düğmeleri -->
           <div class="projects-filter" aria-label="Project filters">
             <button class="pf-btn is-active" data-filter="all">All</button>
             <button class="pf-btn" data-filter="da">Data Analysis</button>
             <button class="pf-btn" data-filter="bi">BI / Dashboards</button>
             <button class="pf-btn" data-filter="acad">Academic</button>
           </div>
-
-          <div class="projects-grid">
-            <!-- Proje 1 -->
-            <article class="project-card" data-cat="da bi">
-              <img
-                src="assets/images/game.png"
-                alt="Video Game Sales Analysis screenshot"
-                loading="lazy"
-              />
-              <div class="pc-body">
-                <h3 class="pc-title">Video Game Sales Analysis</h3>
-                <p class="pc-desc">
-                  I analyzed global sales data to uncover platform and genre
-                  trends, and created interactive visualizations to compare
-                  regions.
-                </p>
-                <ul class="pc-tags">
-                  <li>Python</li>
-                  <li>Pandas</li>
-                  <li>Seaborn</li>
-                  <li>Plotly</li>
-                  <li>PowerBI</li>
-                </ul>
-                <div class="pc-links">
-                  <a
-                    href="https://github.com/HCAKKAYA/video_game_sales"
-                    target="_blank"
-                    rel="noopener"
-                    >GitHub</a
-                  >
+          <div class="swiper myProjectsSwiper">
+            <div class="projects-grid swiper-wrapper">
+              <!-- Proje 1 -->
+              <article class="project-card swiper-slide" data-cat="da bi">
+                <img
+                  src="assets/images/game.png"
+                  alt="Video Game Sales Analysis screenshot"
+                  loading="lazy"
+                />
+                <div class="pc-body">
+                  <h3 class="pc-title">Video Game Sales Analysis</h3>
+                  <p class="pc-desc">
+                    I analyzed global sales data to uncover platform and genre
+                    trends, and created interactive visualizations to compare
+                    regions.
+                  </p>
+                  <ul class="pc-tags">
+                    <li>Python</li>
+                    <li>Pandas</li>
+                    <li>Seaborn</li>
+                    <li>Plotly</li>
+                    <li>PowerBI</li>
+                  </ul>
+                  <div class="pc-links">
+                    <a
+                      href="https://github.com/HCAKKAYA/video_game_sales"
+                      target="_blank"
+                      rel="noopener"
+                      >GitHub</a
+                    >
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
 
-            <!-- Proje 2 -->
-            <article class="project-card" data-cat="da">
-              <img
-                src="assets/images/property-investment.png"
-                alt="House Prices Regression project"
-                loading="lazy"
-              />
-              <div class="pc-body">
-                <h3 class="pc-title">House Prices: Regression</h3>
-                <p class="pc-desc">
-                  I predicted house prices through missing value handling, log
-                  transformations, and modeling; feature engineering and error
-                  metrics were reported.
-                </p>
-                <ul class="pc-tags">
-                  <li>Python</li>
-                  <li>Pandas</li>
-                  <li>scikit-learn</li>
-                </ul>
-                <div class="pc-links">
-                  <!-- GitHub / Notebook linkleri -->
-                  <a href="https://github.com/HCAKKAYA/house_price_analysis" target="_blank" rel="noopener">Github</a>
+              <!-- Proje 2 -->
+              <article class="project-card swiper-slide" data-cat="da">
+                <img
+                  src="assets/images/property-investment.png"
+                  alt="House Prices Regression project"
+                  loading="lazy"
+                />
+                <div class="pc-body">
+                  <h3 class="pc-title">House Prices: Regression</h3>
+                  <p class="pc-desc">
+                    I predicted house prices through missing value handling, log
+                    transformations, and modeling; feature engineering and error
+                    metrics were reported.
+                  </p>
+                  <ul class="pc-tags">
+                    <li>Python</li>
+                    <li>Pandas</li>
+                    <li>scikit-learn</li>
+                  </ul>
+                  <div class="pc-links">
+                    <!-- GitHub / Notebook linkleri -->
+                    <a href="https://github.com/HCAKKAYA/house_price_analysis" target="_blank" rel="noopener">Github</a>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
 
-            <!-- Proje 3 -->
-            <article class="project-card" data-cat="bi">
-              <img
-                src="assets/images/ecommerce.png"
-                alt="E-Commerce Sales Dashboard"
-                loading="lazy"
-              />
-              <div class="pc-body">
-                <h3 class="pc-title">E-Commerce Sales Analysis</h3>
-                <p class="pc-desc">
-                  End-to-end analysis of an e-commerce sales dataset using MSSQL
-                  and Python, including data cleaning, ETL, analysis, and
-                  customer segmentation (RFM).
-                </p>
-                <ul class="pc-tags">
-                  <li>MSSQL</li>
-                  <li>Python</li>
-                  <li>Pandas</li>
-                  <li>Numpy</li>
-                  <li>Matplotlib</li>
-                  <li>Seaborn</li>
-                </ul>
-                <div class="pc-links">
-                  <a href="https://github.com/HCAKKAYA/e_commerce_analysis" target="_blank" rel="noopener">GitHub</a>
+              <!-- Proje 3 -->
+              <article class="project-card swiper-slide" data-cat="bi">
+                <img
+                  src="assets/images/ecommerce.png"
+                  alt="E-Commerce Sales Dashboard"
+                  loading="lazy"
+                />
+                <div class="pc-body">
+                  <h3 class="pc-title">E-Commerce Sales Analysis</h3>
+                  <p class="pc-desc">
+                    End-to-end analysis of an e-commerce sales dataset using MSSQL
+                    and Python, including data cleaning, ETL, analysis, and
+                    customer segmentation (RFM).
+                  </p>
+                  <ul class="pc-tags">
+                    <li>MSSQL</li>
+                    <li>Python</li>
+                    <li>Pandas</li>
+                    <li>Numpy</li>
+                    <li>Matplotlib</li>
+                    <li>Seaborn</li>
+                  </ul>
+                  <div class="pc-links">
+                    <a href="https://github.com/HCAKKAYA/e_commerce_analysis" target="_blank" rel="noopener">GitHub</a>
+                  </div>
                 </div>
-              </div>
-            </article>
-            <div class="projects-more">
+              </article>
+              <!-- Proje 4 -->
+              <article class="project-card swiper-slide" data-cat="da bi">
+                <img
+                  src="assets/images/covid-19 analysis.png"
+                  alt="E-Commerce Sales"
+                  loading="lazy"
+                />
+                <div class="pc-body">
+                  <h3 class="pc-title">Covid-19 Analysis with Tableau and SQL</h3>
+                  <p class="pc-desc">
+                    In this project, Covid-19 case and death data were processed using SQL to extract meaningful insights. Interactive visualizations were then created with Tableau to present case trends, death rates, and comparisons across countries and continents. The project covers end-to-end steps of data cleaning, querying, and visualization.
+                  </p>
+                  <ul class="pc-tags">
+                    <li>MSSQL</li>
+                    <li>Tableau</li>
+                  </ul>
+                  <div class="pc-links">
+                    <a href="https://github.com/HCAKKAYA/Covid-19-Analysis-with-Tableau-and-SQL" target="_blank" rel="noopener">GitHub</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Proje 5 -->
+              <article class="project-card swiper-slide" data-cat="da">
+                <img
+                  src="assets/images/exploration.png"
+                  alt="pusula_huseyin_can_akkaya"
+                  loading="lazy"
+                />
+                <div class="pc-body">
+                  <h3 class="pc-title"> Pusula – Hüseyin Can Akkaya</h3>
+                  <p class="pc-desc">                 
+                    This repository contains exploratory data analysis (EDA) and feature engineering on a Physical Medicine and Rehabilitation dataset as part of the Pusula project. The work focuses on the target variable TreatmentDuration, including data cleaning, transformations, visualizations, and correlation analysis.
+                  </p>
+                  <ul class="pc-tags">
+                    <li>Python</li>
+                    <li>Pandas</li>
+                    <li>Matplotlib</li>
+                  </ul>
+                  <div class="pc-links">
+                    <a href="https://github.com/HCAKKAYA/pusula_huseyin_can_akkaya" target="_blank" rel="noopener">GitHub</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+          </div>
+              <div class="projects-more">
               <a
                 href="https://github.com/HCAKKAYA"
                 target="_blank"
@@ -285,7 +342,6 @@
                 Check out Github for more →
               </a>
             </div>
-          </div>
         </section>
 
         <!-- ****************** CONTACT ************************ -->
@@ -376,12 +432,23 @@
               House price analysis image from
               <a href="https://www.flaticon.com/authors/kornkun" target="_blank" rel="noopener">kornkun</a>
             </p>
+            <p>
+              Covid-19 analysis image from
+              <a href="https://www.flaticon.com/free-icons/analysis" title="analysis icons">Analysis icons created by srip - Flaticon</a>
+            </p>
+            <p>
+              Pusula talent academy analysis image from
+              <a href="https://www.flaticon.com/free-icons/analysis" title="analysis icons">Analysis icons created by HAJICON - Flaticon</a>
+            </p>
           </p>
         </div>
       </footer>
     </div>
     <!-- ****************** TYPING JS LINK *************** -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- ************************ swiper js ************************ -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <!-- ****************** SCROLL REVEAL JS LINK *************** -->
     <script src="https://unpkg.com/scrollreveal"></script>

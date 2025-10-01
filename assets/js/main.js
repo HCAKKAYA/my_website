@@ -54,11 +54,10 @@ sr.reveal(".social_icons", { delay: 200 });
 sr.reveal(".featured-image", { delay: 300 });
 /* -- PROJECT BOX -- */
 sr.reveal(".project-box", { interval: 200 });
-sr.reveal(".project-card", { interval: 120 });
 /* -- HEADINGS -- */
 sr.reveal(".top-header", {});
-/* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
 
+/* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
 /* -- ABOUT INFO & CONTACT INFO -- */
 const srLeft = ScrollReveal({
   origin: "left",
@@ -69,6 +68,7 @@ const srLeft = ScrollReveal({
 
 srLeft.reveal(".about-info", { delay: 100 });
 srLeft.reveal(".contact-info", { delay: 100 });
+
 /* -- ABOUT SKILLS & FORM BOX -- */
 const srRight = ScrollReveal({
   origin: "right",
@@ -79,6 +79,7 @@ const srRight = ScrollReveal({
 
 srRight.reveal(".skills-box", { delay: 100 });
 srRight.reveal(".form-control", { delay: 100 });
+
 /* ----- CHANGE ACTIVE LINK ----- */
 const sections = document.querySelectorAll("section[id]");
 function scrollActive() {
@@ -100,37 +101,22 @@ function scrollActive() {
 }
 window.addEventListener("scroll", scrollActive);
 
-/* === Projects Filter (çoklu kategori desteği) === */
-const filterButtons = document.querySelectorAll(".pf-btn");
-const projectCards = document.querySelectorAll(".project-card");
+/* === Swiper & Projects Filter === */
+let swiper;
 
-filterButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    filterButtons.forEach((b) => b.classList.remove("is-active"));
-    btn.classList.add("is-active");
-
-    const cat = btn.dataset.filter; // all | da | bi | acad
-    projectCards.forEach((card) => {
-      const cats = card.dataset.cat.split(" "); // ["da","bi"]
-      const show = cat === "all" || cats.includes(cat);
-      card.style.display = show ? "" : "none";
-    });
-  });
-});
-
-// ********************** swiper js **********************
 document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper(".myProjectsSwiper", {
-    loop: true,
+  // Swiper başlatma
+  swiper = new Swiper(".myProjectsSwiper", {
+    loop: true, // loop açık
     spaceBetween: 24,
     grabCursor: true,
 
-    slidesPerView: 3, // varsayılan
+    slidesPerView: 3,
     breakpoints: {
       0: { slidesPerView: 1 },
-      640: { slidesPerView: 2 },
-      768: { slidesPerView: 3 },
-      1024: { slidesPerView: 4 },
+      640: { slidesPerView: 1.2 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
     },
 
     pagination: {
@@ -143,5 +129,43 @@ document.addEventListener("DOMContentLoaded", () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+  });
+
+  // Filtreleme butonları
+  const filterButtons = document.querySelectorAll(".pf-btn");
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Aktif buton güncellemesi
+      filterButtons.forEach((b) => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+
+      const cat = btn.dataset.filter;
+
+      // Tüm slide'ları al
+      const slides = document.querySelectorAll(".swiper-slide");
+
+      // Slide'ları filtrele
+      slides.forEach((slide) => {
+        const card = slide.querySelector(".project-card");
+        if (!card) return;
+
+        const cats = card.dataset.cat ? card.dataset.cat.split(" ") : [];
+        const show = cat === "all" || cats.includes(cat);
+
+        // Slide'ı gizle/göster
+        if (show) {
+          slide.style.display = "";
+        } else {
+          slide.style.display = "none";
+        }
+      });
+
+      // Swiper'ı güncelle ve yeniden başlat
+      if (swiper) {
+        swiper.update();
+        swiper.slideTo(0);
+      }
+    });
   });
 });

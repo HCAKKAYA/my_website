@@ -827,3 +827,67 @@ footer {
 .projects-more .btn-link:hover {
   background: var(--first-color-hover);
 }
+
+/* === Swiper Navigation & Pagination Stilleri === */
+
+/* Swiper container */
+.myProjectsSwiper {
+  width: 100%;
+  padding: 12px 0 50px;
+  position: relative;
+}
+
+/* Swiper slide içindeki card'ı ortalama */
+.myProjectsSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+
+/* Pagination (noktalar) */
+.swiper-pagination {
+  bottom: 10px !important;
+}
+
+.swiper-pagination-bullet {
+  background: var(--first-color);
+  opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--first-color);
+}
+
+/* Navigation buttons (ok tuşları) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--first-color);
+  width: 44px;
+  height: 44px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: var(--first-color-hover);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Mobilde navigation buttonları küçült */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 16px;
+  }
+}

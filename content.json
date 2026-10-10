@@ -1,0 +1,100 @@
+{
+  "profile": {
+    "name": "Hüseyin Can Akkaya",
+    "firstName": "Hüseyin Can",
+    "role": "Jr. Data Analyst",
+    "about": "Ben Hüseyin Can Akkaya, Jr. Data Analyst. SQL, Python ve Tableau ile veriyi inceliyor; gelir, satış ve müşteri davranışlarını anlaşılır analizlere dönüştürüyorum. Bu portfolyoda projelerimi ve analiz süreçlerimi paylaşıyorum.",
+    "email": "hcaakkaya@gmail.com",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/HCAKKAYA"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/huseyincanakkaya/"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "game-revenue",
+      "title": "Oyun geliri ve kullanıcı analizi",
+      "subtitle": "Game Revenue & User Analytics",
+      "category": "dashboard",
+      "categories": [
+        "dashboard",
+        "sql"
+      ],
+      "type": "Gelir analitiği & dashboard",
+      "tools": [
+        "PostgreSQL",
+        "Tableau",
+        "Churn analizi"
+      ],
+      "visual": "dashboard",
+      "image": "assets/game-revenue-dashboard.png",
+      "imageAlt": "Tableau dashboard: aylık gelir, ücretli kullanıcılar, ARPPU ve gelir değişiminin kaynakları",
+      "isExample": false,
+      "summary": "Aylık gelirdeki değişimi; yeni kullanıcılar, geri dönüşler ve kullanıcı kaybı üzerinden açıklayan SQL ve Tableau çalışması.",
+      "question": "Oyun gelirini ve ücretli kullanıcı sayısını hangi faktörler artırıyor veya azaltıyor?",
+      "approach": "Mart–Aralık 2022 dönemindeki ödeme verilerini PostgreSQL ile kullanıcı ve ay bazında hazırladım. MRR, ARPPU, churn, reaktivasyon ve gelir hareketlerini hesaplayıp kullanıcı ve gelir dengelerini kontrol ettim. Bulguları tarih, dil ve yaş filtreleri olan bir Tableau dashboard'unda birleştirdim.",
+      "result": "Analizde Ekim 2022, 9.343,86 USD MRR ve 199 ücretli kullanıcıyla zirveye ulaşıyor. Kasımda gelir yaklaşık 918,87 USD azalıyor; yeni kullanıcılar ve geri dönüşlerden gelen gelir, kullanıcı kaybı ve harcama düşüşünü karşılayamıyor. Çalışma GoIT Data Analytics programı kapsamında tamamlandı; MRR, bu proje için aylık ödeme geliri olarak ele alınıyor.",
+      "demoUrl": "https://public.tableau.com/app/profile/h.seyin.akkaya/viz/Proje2GelirveKullancAnaliziHseyinAkkaya/GelirveKullancAnalizi",
+      "sourceUrl": "https://github.com/HCAKKAYA/game_revenue_user_analytics"
+    },
+    {
+      "id": "ecommerce-analysis",
+      "title": "E-ticaret satış ve müşteri analizi",
+      "subtitle": "E-Commerce Sales Analysis",
+      "category": "python",
+      "categories": [
+        "python",
+        "sql"
+      ],
+      "type": "Uçtan uca veri analizi",
+      "tools": [
+        "Python",
+        "SQL Server",
+        "Pandas",
+        "RFM"
+      ],
+      "visual": "python",
+      "image": "assets/ecommerce-analysis-7.png",
+      "imageAlt": "E-ticaret analizindeki müşteri segment oranları: orta seviye, sadık, yeni ve riskteki müşteriler",
+      "isExample": false,
+      "summary": "SQL ile veri hazırlığından Python ile satış trendleri ve RFM müşteri segmentasyonuna uzanan bir analiz.",
+      "question": "Satış trendleri, ürünler ve müşteri segmentleri e-ticaret performansını nasıl açıklıyor?",
+      "approach": "MSSQL'de veri temizleme ve ETL adımlarını, günlük ciro ve RFM için view'leri hazırladım. Python, Pandas, NumPy, Matplotlib ve Seaborn ile veriyi keşfettim; satışları zaman, ürün ve ülke bazında inceledim. Müşterileri RFM yaklaşımıyla segmentlere ayırdım.",
+      "result": "Analiz, cironun yaklaşık %85'inin Birleşik Krallık'tan geldiğini ve yıl sonuna doğru satışların arttığını gösteriyor. Müşteri segmentleri; sadık, yeni ve riskteki müşteri gruplarını görünür kılarak CRM değerlendirmelerine zemin oluşturuyor. Notebook ve SQL çalışmalarının görselleri GitHub deposunda bulunuyor.",
+      "demoUrl": "",
+      "sourceUrl": "https://github.com/HCAKKAYA/e_commerce_analysis"
+    },
+    {
+      "id": "retail-sales",
+      "title": "PostgreSQL ile perakende satış analizi",
+      "subtitle": "Retail Sales Analysis",
+      "category": "sql",
+      "categories": [
+        "sql"
+      ],
+      "type": "SQL & iş soruları",
+      "tools": [
+        "PostgreSQL",
+        "SQL",
+        "CTE",
+        "Window functions"
+      ],
+      "visual": "sql",
+      "previewFilename": "postresql_project.sql",
+      "previewCode": "SELECT category,\n  SUM(total_sale) AS net_sale,\n  COUNT(*) AS total_orders\nFROM retail_sales\nGROUP BY category;",
+      "isExample": false,
+      "summary": "Satış, kategori, müşteri ve zaman bazlı iş sorularını PostgreSQL sorgularıyla yanıtlayan çalışma.",
+      "question": "Hangi ürün kategorileri, müşteriler ve zaman aralıkları satışlarda öne çıkıyor?",
+      "approach": "PostgreSQL'de satış tablosunu oluşturdum; kayıt, müşteri ve kategori sayılarını inceleyip eksik değerleri kontrol ettim. Kategori satışları, müşteri demografisi, yüksek tutarlı işlemler, aylık ortalama satışlar ve vardiya bazlı siparişler için SQL sorguları hazırladım. CTE ve pencere fonksiyonlarıyla karşılaştırmaları genişlettim.",
+      "result": "On iş sorusu üzerinden kategori performansı, en çok harcayan müşteriler, müşteri dağılımı ve satış zamanlarını inceleyen bir SQL analizi ortaya çıktı. Depoda veri hazırlığı ve analiz sorguları; README'de ise sorguların açıklamaları yer alıyor.",
+      "demoUrl": "",
+      "sourceUrl": "https://github.com/HCAKKAYA/Retail-Sales-Analysis"
+    }
+  ]
+}

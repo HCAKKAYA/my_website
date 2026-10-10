@@ -1,0 +1,52 @@
+'use strict';
+// Fixed UI copy only. Project and profile content is rendered as text.
+const uiText = {
+  tr: {
+    skip: 'İçeriğe geç', navigation: 'Ana menü', projects: 'Projeler', about: 'Hakkımda', contact: 'İletişim',
+    heroTitle: 'Verinin ardındaki<br><span>hikâyeyi</span> arıyorum<span class="title-dot">.</span>',
+    heroDescription: 'Merhaba, ben <strong data-profile="firstName">Hüseyin Can</strong>.<br>Veri analizi çalışmalarımı ve proje notlarımı<br class="desktop-break"> burada bir araya getiriyorum.',
+    explore: 'Projelerimi keşfet', downloadCV: 'CV’mi indir', footnote: 'Veri. Merak. Yeni bakış açıları.',
+    artDescription: 'Veriden içgörüye uzanan süreci temsil eden soyut veri grafiği', beyondAnalysis: 'ANALİZİN ÖTESİNDE',
+    artLabel: 'Her verinin<br>bir hikâyesi var.', artData: '01 / VERİ', artAnalysis: '02 / ANALİZ', artInsight: '03 / İÇGÖRÜ',
+    insightTag: 'Karmaşık veriler.<br><strong>Net bir bakış.</strong>', portfolio: 'KİŞİSEL PORTFOLYO', keepExploring: 'KEŞFETMEYE DEVAM ET',
+    projectsIndex: '01 / PROJELER', projectsTitle: 'Veriden çıkan işler<span>.</span>', projectsIntro: 'Bir sorudan başlayan,<br>bir içgörüye uzanan çalışmalar.',
+    filterLabel: 'Projeleri kategoriye göre filtrele', all: 'Tümü', demoContent: 'Örnek proje içerikleri', empty: 'Bu kategoride henüz proje bulunmuyor.',
+    disclaimer: 'Bu projeler tasarımın ön izlemesi için hazırlanmış örneklerdir. Gerçek çalışmalarım bu alanda yer alacak.',
+    aboutIndex: '02 / HAKKIMDA', aboutTitle: 'Biraz merak.<br>Bolca <span>veri.</span>',
+    aboutProcess: 'Her proje için soruyu, izlediğim yolu ve ortaya çıkan sonucu bir araya getiriyorum. Böylece yalnızca çıktıyı değil, arkasındaki düşünce sürecini de görebilirsin.',
+    inPortfolio: 'BU PORTFOLYODA', dataAnalysis: 'Veri analizi', visualization: 'Görselleştirme', projectNotes: 'Proje notları', browseWork: 'Çalışmalara göz at',
+    contactIndex: '03 / İLETİŞİM', contactTitle: 'Bir fikir,<br>bir <span>merhaba.</span>', contactIntro: 'Veri, projeler ve yeni fikirler üzerine konuşalım.',
+    contactPlaceholder: 'İletişim bağlantıları<br><strong>yakında burada.</strong>', backTop: 'Yukarı dön', closeProject: 'Proje detayını kapat',
+    loadError: 'Proje içerikleri yüklenemedi. Lütfen sayfayı yenile.', menuOpen: 'Menüyü aç', menuClose: 'Menüyü kapat', start: 'başlangıç',
+    metaDescription: 'Veri analizi projeleri, çalışmalar ve proje notları.', ogDescription: 'Veri analizi çalışmaları ve proje notları için kişisel portfolyo.',
+    projectImage: 'proje görseli', viewDetails: 'detayları görüntüle', exampleProject: 'Örnek proje', newTab: 'yeni sekmede açılır',
+    demoNotice: 'Bu bir örnek proje yerleşimidir. Proje içeriği ve görseller gerçek çalışmalar eklendiğinde güncellenecek.',
+    question: 'Başlangıç sorusu', approach: 'Yaklaşım', result: 'Sonuç & notlar', viewProject: 'Projeyi görüntüle', viewGitHub: "GitHub’da incele",
+    sqlCaption: 'Bir sorgu. Yeni bir bakış açısı.', notebookCaption: 'Veriyi tanımakla başlar.', salesOverview: 'Satışa genel bakış', sampleData: 'ÖRNEK VERİ',
+    totalSales: 'TOPLAM SATIŞ', orders: 'SİPARİŞ', averageBasket: 'ORT. SEPET', monthlySales: 'AYLIK SATIŞ DAĞILIMI', categories: 'KATEGORİLER'
+  },
+  en: {
+    skip: 'Skip to content', navigation: 'Main navigation', projects: 'Projects', about: 'About', contact: 'Contact',
+    heroTitle: 'Finding the<br><span>story</span> in data<span class="title-dot">.</span>',
+    heroDescription: 'Hello, I’m <strong data-profile="firstName">Hüseyin Can</strong>.<br>I bring my data analysis projects<br class="desktop-break"> and notes together here.',
+    explore: 'Explore my projects', downloadCV: 'Download CV', footnote: 'Data. Curiosity. New perspectives.',
+    artDescription: 'An abstract chart representing the journey from data to insight', beyondAnalysis: 'BEYOND THE ANALYSIS',
+    artLabel: 'Every dataset<br>has a story.', artData: '01 / DATA', artAnalysis: '02 / ANALYSIS', artInsight: '03 / INSIGHT',
+    insightTag: 'Complex data.<br><strong>A clear perspective.</strong>', portfolio: 'PERSONAL PORTFOLIO', keepExploring: 'KEEP EXPLORING',
+    projectsIndex: '01 / PROJECTS', projectsTitle: 'Work shaped by data<span>.</span>', projectsIntro: 'Starting with a question,<br>working towards an insight.',
+    filterLabel: 'Filter projects by category', all: 'All', demoContent: 'Example project content', empty: 'No projects in this category yet.',
+    disclaimer: 'These example projects demonstrate the portfolio layout. My actual work will appear here.',
+    aboutIndex: '02 / ABOUT', aboutTitle: 'A little curiosity.<br>A lot of <span>data.</span>',
+    aboutProcess: 'For each project, I bring together the question, the approach and the outcome. You can explore the thinking behind the analysis as well as the final result.',
+    inPortfolio: 'IN THIS PORTFOLIO', dataAnalysis: 'Data analysis', visualization: 'Visualization', projectNotes: 'Project notes', browseWork: 'Browse my work',
+    contactIndex: '03 / CONTACT', contactTitle: 'An idea,<br>a <span>hello.</span>', contactIntro: 'Let’s talk about data, projects and new ideas.',
+    contactPlaceholder: 'Contact links<br><strong>coming soon.</strong>', backTop: 'Back to top', closeProject: 'Close project details',
+    loadError: 'Project content could not be loaded. Please refresh the page.', menuOpen: 'Open menu', menuClose: 'Close menu', start: 'home',
+    metaDescription: 'Data analysis projects, work and project notes.', ogDescription: 'A personal portfolio of data analysis projects and notes.',
+    projectImage: 'project image', viewDetails: 'view details', exampleProject: 'Example project', newTab: 'opens in a new tab',
+    demoNotice: 'This is an example project layout. The content and visuals will be updated when actual projects are added.',
+    question: 'The question', approach: 'Approach', result: 'Results & notes', viewProject: 'View project', viewGitHub: 'Explore on GitHub',
+    sqlCaption: 'One query. A new perspective.', notebookCaption: 'It starts with understanding the data.', salesOverview: 'Sales overview', sampleData: 'SAMPLE DATA',
+    totalSales: 'TOTAL SALES', orders: 'ORDERS', averageBasket: 'AVG. BASKET', monthlySales: 'MONTHLY SALES', categories: 'CATEGORIES'
+  }
+};

@@ -1,0 +1,100 @@
+{
+  "profile": {
+    "name": "Hüseyin Can Akkaya",
+    "firstName": "Hüseyin Can",
+    "role": "Jr. Data Analyst",
+    "about": "I'm Hüseyin Can Akkaya, a Jr. Data Analyst. I use SQL, Python and Tableau to explore data and turn revenue, sales and customer behavior into clear analyses. This portfolio brings together my projects and analytical process.",
+    "email": "hcaakkaya@gmail.com",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/HCAKKAYA"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/huseyincanakkaya/"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "game-revenue",
+      "title": "Game revenue and user analytics",
+      "subtitle": "Game Revenue & User Analytics",
+      "category": "dashboard",
+      "categories": [
+        "dashboard",
+        "sql"
+      ],
+      "type": "Revenue analytics & dashboard",
+      "tools": [
+        "PostgreSQL",
+        "Tableau",
+        "Churn analysis"
+      ],
+      "visual": "dashboard",
+      "image": "assets/game-revenue-dashboard.png",
+      "imageAlt": "Tableau dashboard showing monthly revenue, paying users, ARPPU and the components of revenue changes",
+      "isExample": false,
+      "summary": "A SQL and Tableau project explaining monthly revenue changes through new users, reactivation and churn.",
+      "question": "Which factors increase or decrease game revenue and the number of paying users?",
+      "approach": "I prepared payment data for March–December 2022 at the user and month level in PostgreSQL. I calculated MRR, ARPPU, churn, reactivation and revenue movements, then reconciled user counts and revenue changes. I brought the findings together in a Tableau dashboard with date, language and age filters.",
+      "result": "In this analysis, October 2022 is the peak month, with USD 9,343.86 in MRR and 199 paying users. Revenue falls by approximately USD 918.87 in November: revenue from new and returning users does not offset churn and reduced spending. The project was completed as part of the GoIT Data Analytics program. For this project, MRR is treated as monthly payment revenue.",
+      "demoUrl": "https://public.tableau.com/app/profile/h.seyin.akkaya/viz/Proje2GelirveKullancAnaliziHseyinAkkaya/GelirveKullancAnalizi",
+      "sourceUrl": "https://github.com/HCAKKAYA/game_revenue_user_analytics"
+    },
+    {
+      "id": "ecommerce-analysis",
+      "title": "E-commerce sales and customer analysis",
+      "subtitle": "E-Commerce Sales Analysis",
+      "category": "python",
+      "categories": [
+        "python",
+        "sql"
+      ],
+      "type": "End-to-end data analysis",
+      "tools": [
+        "Python",
+        "SQL Server",
+        "Pandas",
+        "RFM"
+      ],
+      "visual": "python",
+      "image": "assets/ecommerce-analysis-7.png",
+      "imageAlt": "Customer segment proportions in the e-commerce analysis: mid-tier, loyal, new and at-risk customers",
+      "isExample": false,
+      "summary": "An analysis covering SQL data preparation, sales trends in Python and RFM customer segmentation.",
+      "question": "How do sales trends, products and customer segments explain e-commerce performance?",
+      "approach": "I prepared data cleaning and ETL steps in MSSQL, along with views for daily revenue and RFM analysis. I explored the data with Python, Pandas, NumPy, Matplotlib and Seaborn, examining sales by time, product and country. I segmented customers using the RFM approach.",
+      "result": "The analysis shows that approximately 85% of revenue comes from the United Kingdom and that sales increase toward the end of the year. Customer segmentation highlights loyal, new and at-risk groups, providing a basis for CRM assessment. Screenshots of the notebook and SQL work are available in the GitHub repository.",
+      "demoUrl": "",
+      "sourceUrl": "https://github.com/HCAKKAYA/e_commerce_analysis"
+    },
+    {
+      "id": "retail-sales",
+      "title": "Retail sales analysis with PostgreSQL",
+      "subtitle": "Retail Sales Analysis",
+      "category": "sql",
+      "categories": [
+        "sql"
+      ],
+      "type": "SQL & business questions",
+      "tools": [
+        "PostgreSQL",
+        "SQL",
+        "CTE",
+        "Window functions"
+      ],
+      "visual": "sql",
+      "previewFilename": "postresql_project.sql",
+      "previewCode": "SELECT category,\n  SUM(total_sale) AS net_sale,\n  COUNT(*) AS total_orders\nFROM retail_sales\nGROUP BY category;",
+      "isExample": false,
+      "summary": "A PostgreSQL project answering business questions about sales, categories, customers and timing.",
+      "question": "Which product categories, customers and time periods stand out in sales?",
+      "approach": "I created the sales table in PostgreSQL, reviewed record, customer and category counts, and checked for missing values. I wrote SQL queries for category sales, customer demographics, high-value transactions, monthly average sales and orders by shift. I extended the comparisons using CTEs and window functions.",
+      "result": "The SQL analysis addresses ten business questions covering category performance, top-spending customers, customer distribution and sales timing. The repository contains the data preparation and analysis queries, with explanations in the README.",
+      "demoUrl": "",
+      "sourceUrl": "https://github.com/HCAKKAYA/Retail-Sales-Analysis"
+    }
+  ]
+}

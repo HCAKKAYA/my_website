@@ -60,7 +60,7 @@
         "RFM"
       ],
       "visual": "python",
-      "image": "assets/ecommerce-analysis-7.png",
+      "image": "assets/ecommerce-rfm-b32d601c.png",
       "imageAlt": "Customer segment proportions in the e-commerce analysis: mid-tier, loyal, new and at-risk customers",
       "isExample": false,
       "summary": "An analysis covering SQL data preparation, sales trends in Python and RFM customer segmentation.",

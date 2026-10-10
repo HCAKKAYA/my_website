@@ -203,7 +203,7 @@ function applyProfile(profile) {
 }
 async function loadContent() {
   try {
-    const entries = await Promise.all([['tr','content.json'],['en','content.en.json']].map(async ([locale,path]) => {
+    const entries = await Promise.all([['tr','content.json?v=20261011-2'],['en','content.en.json?v=20261011-2']].map(async ([locale,path]) => {
       const response = await fetch(path);
       if (!response.ok) throw new Error('Content unavailable');
       const data = await response.json();

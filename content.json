@@ -60,7 +60,7 @@
         "RFM"
       ],
       "visual": "python",
-      "image": "assets/ecommerce-analysis-7.png",
+      "image": "assets/ecommerce-rfm-b32d601c.png",
       "imageAlt": "E-ticaret analizindeki müşteri segment oranları: orta seviye, sadık, yeni ve riskteki müşteriler",
       "isExample": false,
       "summary": "SQL ile veri hazırlığından Python ile satış trendleri ve RFM müşteri segmentasyonuna uzanan bir analiz.",

@@ -29,8 +29,8 @@
       "tools": [
         "Python",
         "DuckDB / SQL",
-        "FastAPI",
-        "GitHub Actions"
+        "Claude API",
+        "FastAPI"
       ],
       "visual": "dashboard",
       "image": "assets/pazaryeri-panel.png",
@@ -40,10 +40,10 @@
       "title": "Weekly profit report for marketplace sellers",
       "type": "Data automation & seller dashboard",
       "imageAlt": "Seller dashboard: net profit, gross sales and order cards, daily net profit chart and stock, loss and return alerts",
-      "summary": "An automation that reads a marketplace order export, calculates net profit after commission, shipping and product cost, prepares a weekly PDF report and gives the seller a dashboard.",
+      "summary": "An automation that reads a marketplace order export, calculates net profit after commission, shipping and product cost, prepares a weekly PDF report and gives the seller a dashboard where they can ask questions about their data in Turkish.",
       "question": "How can a small marketplace seller see, every week and without manual work, which products lose money even while revenue grows?",
-      "approach": "I read the marketplace export with Python, cleaned Turkish number and date formats as well as duplicate and missing rows, and loaded the data into DuckDB. Net profit, average basket, return rate and days of stock left are calculated in SQL, with rule-based alerts for stock-outs, loss-making products and high returns. The results become a weekly HTML/PDF report and email, and can be explored by period in a seller dashboard I built with FastAPI. An optional AI commentary uses only the calculated figures, and every number it writes is checked against them.",
-      "result": "The result is a system that runs end to end on synthetic store data: 68 automated tests, a live demo rebuilt every night with GitHub Actions and a sample weekly report. While testing I found and fixed a bug where long periods were compared with dates before the data began. The project has not yet been tried with a real seller's data, so profit assumptions such as shipping and commission on returns are stated in the report."
+      "approach": "I read the marketplace export with Python, cleaned Turkish number and date formats as well as duplicate and missing rows, and loaded the data into DuckDB. Net profit, average basket, return rate and days of stock left are calculated in SQL, with rule-based alerts for stock-outs, loss-making products and high returns. The results become a weekly HTML/PDF report and email, and can be explored by period in a seller dashboard I built with FastAPI. The dashboard has an \"Ask your data\" box: the seller types a question such as \"What share of revenue goes to shipping?\", Claude turns it into SQL, the query runs on a read-only connection and the answer is shown together with the SQL used. I did not leave the profit rules to the model: it queries a view where net profit is already calculated on every row, and every number in its answer is checked against the result table.",
+      "result": "I measured the question answering with a 45-question set, scored on the query result rather than the SQL text. The first run got 43 of 45 right; in both misses the model returned a list when a single product was asked for. After adding a general rule to the prompt and rerunning the whole set, it reached 45/45, averaging 4.7 seconds and about 1.4 US cents per question. Because the same person wrote the set and the prompt, this does not mean 100% accuracy in real use; the next step is an unseen test set. The project runs on synthetic data with 93 automated tests, and the live demo is rebuilt nightly with GitHub Actions (the demo has no question box because it is serverless)."
     },
     {
       "id": "game-revenue",

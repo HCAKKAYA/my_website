@@ -18,6 +18,34 @@
   },
   "projects": [
     {
+      "id": "pazaryeri-rapor",
+      "subtitle": "Marketplace Profit Report & Seller Dashboard",
+      "category": "python",
+      "categories": [
+        "python",
+        "sql",
+        "dashboard"
+      ],
+      "tools": [
+        "Python",
+        "DuckDB / SQL",
+        "FastAPI",
+        "GitHub Actions"
+      ],
+      "visual": "dashboard",
+      "image": "assets/pazaryeri-panel.png",
+      "isExample": false,
+      "demoUrl": "https://hcakkaya.github.io/pazaryeri-rapor/",
+      "sourceUrl": "https://github.com/HCAKKAYA/pazaryeri-rapor",
+      "title": "Weekly profit report for marketplace sellers",
+      "type": "Data automation & seller dashboard",
+      "imageAlt": "Seller dashboard: net profit, gross sales and order cards, daily net profit chart and stock, loss and return alerts",
+      "summary": "An automation that reads a marketplace order export, calculates net profit after commission, shipping and product cost, prepares a weekly PDF report and gives the seller a dashboard.",
+      "question": "How can a small marketplace seller see, every week and without manual work, which products lose money even while revenue grows?",
+      "approach": "I read the marketplace export with Python, cleaned Turkish number and date formats as well as duplicate and missing rows, and loaded the data into DuckDB. Net profit, average basket, return rate and days of stock left are calculated in SQL, with rule-based alerts for stock-outs, loss-making products and high returns. The results become a weekly HTML/PDF report and email, and can be explored by period in a seller dashboard I built with FastAPI. An optional AI commentary uses only the calculated figures, and every number it writes is checked against them.",
+      "result": "The result is a system that runs end to end on synthetic store data: 68 automated tests, a live demo rebuilt every night with GitHub Actions and a sample weekly report. While testing I found and fixed a bug where long periods were compared with dates before the data began. The project has not yet been tried with a real seller's data, so profit assumptions such as shipping and commission on returns are stated in the report."
+    },
+    {
       "id": "game-revenue",
       "title": "Game revenue and user analytics",
       "subtitle": "Game Revenue & User Analytics",

@@ -18,6 +18,34 @@
   },
   "projects": [
     {
+      "id": "pazaryeri-rapor",
+      "subtitle": "Marketplace Profit Report & Seller Dashboard",
+      "category": "python",
+      "categories": [
+        "python",
+        "sql",
+        "dashboard"
+      ],
+      "tools": [
+        "Python",
+        "DuckDB / SQL",
+        "FastAPI",
+        "GitHub Actions"
+      ],
+      "visual": "dashboard",
+      "image": "assets/pazaryeri-panel.png",
+      "isExample": false,
+      "demoUrl": "https://hcakkaya.github.io/pazaryeri-rapor/",
+      "sourceUrl": "https://github.com/HCAKKAYA/pazaryeri-rapor",
+      "title": "Pazaryeri satıcıları için haftalık kâr raporu",
+      "type": "Veri otomasyonu & satıcı paneli",
+      "imageAlt": "Satıcı paneli: net kâr, brüt satış ve sipariş kartları, günlük net kâr grafiği ve stok, zarar ve iade uyarıları",
+      "summary": "Pazaryeri sipariş dosyasından komisyon, kargo ve ürün maliyeti sonrası net kârı hesaplayan; her hafta PDF rapor hazırlayan ve satıcıya bir panel sunan otomasyon.",
+      "question": "Pazaryerinde satış yapan küçük bir işletme, cirosu artarken hangi ürünlerde para kaybettiğini her hafta kendiliğinden nasıl görebilir?",
+      "approach": "Pazaryeri dışa aktarımını Python ile okuyup Türkçe sayı ve tarih biçimlerini, çift ve eksik satırları temizledim, veriyi DuckDB'ye yükledim. Net kâr, sepet ortalaması, iade oranı ve stoğun kaç gün yeteceğini SQL ile hesapladım; stok bitmesi, zararına satış ve yüksek iade için kural tabanlı uyarılar ekledim. Sonuçlar haftalık HTML/PDF rapor ve e-posta olarak üretiliyor, FastAPI ile yazdığım satıcı panelinde dönem seçilerek incelenebiliyor. İsteğe bağlı yapay zeka yorumu yalnız hesaplanmış sayıları kullanıyor ve yazdığı her sayı bu hesaplarla karşılaştırılıyor.",
+      "result": "Sentetik bir mağaza verisiyle uçtan uca çalışan bir sistem çıktı: 68 otomatik test, GitHub Actions ile her gece güncellenen canlı demo ve örnek haftalık rapor. Çalışma sırasında, uzun dönemlerde panelin verinin başlamadığı tarihlerle karşılaştırma yaptığı bir hatayı bulup düzelttim. Proje gerçek bir satıcı verisiyle henüz denenmedi; bu yüzden kargo ve iade komisyonu gibi kâr varsayımları raporda açıkça yazılı."
+    },
+    {
       "id": "game-revenue",
       "title": "Oyun geliri ve kullanıcı analizi",
       "subtitle": "Game Revenue & User Analytics",
